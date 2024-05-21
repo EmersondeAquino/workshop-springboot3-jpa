@@ -14,11 +14,11 @@ public class OrderService {
 
 	@Autowired
 	private OrderRepository repository;
-	
-	public List<Order> FindAll(){
+
+	public List<Order> FindAll() {
 		return repository.findAll();
 	}
-	
+
 	public Order FindById(Long id) {
 		Optional<Order> obj = repository.findById(id);
 		return obj.get();

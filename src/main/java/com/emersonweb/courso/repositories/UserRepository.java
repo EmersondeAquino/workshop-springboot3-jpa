@@ -6,5 +6,4 @@ import com.emersonweb.courso.entites.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-	
 }

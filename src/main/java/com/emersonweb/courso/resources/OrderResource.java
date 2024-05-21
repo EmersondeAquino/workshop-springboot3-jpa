@@ -18,16 +18,16 @@ public class OrderResource {
 
 	@Autowired
 	private OrderService service;
-	
+
 	@GetMapping
 	public ResponseEntity<List<Order>> findAll() {
-		 List<Order> list = service.FindAll();
+		List<Order> list = service.FindAll();
 		return ResponseEntity.ok().body(list);
 	}
-	
-	 @GetMapping(value = "/{id}")
-	 public ResponseEntity<Order> findById(@PathVariable long id){
-		 Order obj = service.FindById(id);
-		 return ResponseEntity.ok().body(obj);
-	 }
+
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Order> findById(@PathVariable long id) {
+		Order obj = service.FindById(id);
+		return ResponseEntity.ok().body(obj);
+	}
 }

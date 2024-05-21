@@ -18,16 +18,16 @@ public class UserResource {
 
 	@Autowired
 	private UserService service;
-	
+
 	@GetMapping
 	public ResponseEntity<List<User>> findAll() {
-		 List<User> list = service.FindAll();
+		List<User> list = service.FindAll();
 		return ResponseEntity.ok().body(list);
 	}
-	
-	 @GetMapping(value = "/{id}")
-	 public ResponseEntity<User> findById(@PathVariable long id){
-		 User obj = service.FindById(id);
-		 return ResponseEntity.ok().body(obj);
-	 }
+
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<User> findById(@PathVariable long id) {
+		User obj = service.FindById(id);
+		return ResponseEntity.ok().body(obj);
+	}
 }
