@@ -14,6 +14,7 @@ import com.emersonweb.courso.entites.User;
 import com.emersonweb.courso.entites.enums.OrderStatus;
 import com.emersonweb.courso.repositories.CategoryRepository;
 import com.emersonweb.courso.repositories.OrderRepository;
+import com.emersonweb.courso.repositories.ProductRepository;
 import com.emersonweb.courso.repositories.UserRepository;
 
 @Configuration
@@ -28,6 +29,9 @@ public class TestConfig implements CommandLineRunner {
 	
 	@Autowired
 	private CategoryRepository categoryrepository;
+	
+	@Autowired
+	private ProductRepository Productrepository;
 
 	@Override
 	public void run(String... args) throws Exception {
