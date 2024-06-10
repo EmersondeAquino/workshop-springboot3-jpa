@@ -2,8 +2,8 @@ package com.emersonweb.courso.entites.enums;
 
 public enum OrderStatus {
 
-	Waiting_Payment(1),
-	Paid(2),
+	WAITING_PAYMENT(1),
+	PAID(2),
 	shipped(3),
 	canceled(4),
 	delivered(5); 
